@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KnowItAll - Movie Pitch</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <img src="images/camera_roll.png" alt="Camera Roll Image">
+        <h1>MOVIE PITCH</h1>
+    </header>
+    <main>
+        <div class="background-container">
+            <img src="images/background_my.jpg" class="background-image" alt="Background Image">
+        </div>
+        <div class="light-grey-box">
+            <section class="box-container">
+                <div class="setup-container">
+                    <div class="setup-inner">
+                        <div class="right-content">
+                            <div class="speech-bubble-ai" id="speech-bubble-ai">
+                                <p id="movie-boss-text">
+                                    Give me a one-sentence concept and I'll come up with a synopsis the studios will love, a possible image and choose the cast!
+                                </p>
+                            </div>
+                            <!-- Text area and pink button -->
+                            <form id="form" class="chatbot-input-container">
+                                <textarea id="setuptextarea" name="user-input" required placeholder="Type your movie idea here..."></textarea>
+                                <button type="button" id="send-btn" class="submit-btn" aria-label="View Pitch">
+                                    View Pitch
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Container for loading message and boss_baby image -->
+                    <div id="loading-container">
+                        <div id="setup-input-container">
+                            <!-- This will be dynamically populated -->
+                        </div>
+                        <p id="movie-boss-text"></p>
+                    </div>
+                </div>
+                <!-- The Output embedded inside light-grey-box -->
+                <section class="output-container" id="output-container">
+                    <div class="output-content">
+                        <div id="output-img-container" class="output-img-container">
+                            <!-- Image will be dynamically loaded here -->
+                        </div>
+                        <div class="output-text">
+                            <h1 id="output-title"></h1>
+                            <h2 id="output-stars"></h2>
+                            <p id="output-text"></p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 MoviePitch All rights reserved
+    </footer>
+    <script type="module" src="index.js"></script>
+</body>
+</html>

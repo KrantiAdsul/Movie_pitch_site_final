@@ -1,0 +1,201 @@
+:root {
+    --border-rad-lg: 15px;
+    --medium-light-text: #586e88;
+    --light-text: #fcfcfc;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;  
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    height: 100%;
+}
+
+/* Update your existing or add this CSS */
+
+.header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header img {
+    width: 50px; /* Adjust size as needed */
+    margin-right: 10px; /* Add spacing between image and text */
+}
+
+.header h1 {
+    font-size: 24px; /* Adjust size as needed */
+    margin: 0;
+}
+
+.main-container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-image {
+    min-width: 100%; /* Ensure the image covers the entire width */
+    min-height: 100%; /* Ensure the image covers the entire height */
+    object-fit: cover; /* Maintain aspect ratio and cover entire container */
+    position: absolute; /* Position absolutely within the container */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure the image is behind other content */
+}
+
+/* Add this to your existing CSS or modify as needed */
+
+/* Update your existing or add this CSS */
+
+.submit-btn {
+    background-color: hotpink;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0; /* Ensure no rounded corners */
+    cursor: pointer;
+}
+
+/* Remove hover effect */
+.submit-btn:hover {
+    background-color: green; /* Keeps the color steady */
+}
+
+.light-grey-box {
+    background-color: white; /* Changed to white background */
+    padding: 20px;
+    border-radius: var(--border-rad-lg);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Ensure light grey box is above background */
+    margin: auto; /* Center the box horizontally */
+    margin-top: 50px; /* Adjust the top margin as needed */
+}
+
+.box-container {
+    padding: 20px;
+}
+
+.setup-container {
+    background-color: #16202C;
+    border-radius: var(--border-rad-lg);
+    color: var(--light-text);
+    padding: 1em;
+}
+
+.logo {
+    width: 45px;
+}
+
+.speech-bubble-ai {
+    margin-top: 20px;
+}
+
+.chatbot-input-container {
+    display: flex;
+    margin-top: 1em;
+}
+
+textarea, button {
+    background-color: transparent;
+    border: 1px solid var(--medium-light-text);
+    border-radius: 15px;
+    padding: 1em;
+}
+
+textarea {
+    color: var(--light-text);
+    width: 100%;
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    resize: none;
+}
+
+button {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.send-btn-icon {
+    width: 20px;
+    display: block;
+}
+
+.output-container {
+    padding: 20px;
+    position: relative;
+    z-index: 1; /* Ensure the output content is above the background */
+    overflow: hidden; /* Prevent overflow issues */
+}
+
+#output-title {
+    font-size: 20px;
+    color: #16202C;
+    margin-bottom: 10px;
+}
+
+#output-stars {
+    font-size: 14px;
+    color: var(--medium-light-text);
+    margin-left: 20px;
+}
+
+.output-img-container {
+    position: relative;
+    z-index: 0; /* Ensure the image is below the text */
+    overflow: hidden; /* Prevent image overflow */
+}
+
+.output-img-container > img {
+    width: 100%; /* Adjust width as needed */
+    position: relative; /* Ensure it follows the container's position */
+    top: 0; /* Adjust positioning as needed */
+    left: 0; /* Adjust positioning as needed */
+    border-radius: var(--border-rad-lg);
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Cursor animation */
+@keyframes cursor-blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.blinking-cursor::after {
+    content: "|";
+    font-weight: 700;
+    display: inline-block;
+    animation: cursor-blink .5s steps(2) infinite;
+}
